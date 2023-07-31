@@ -1,8 +1,7 @@
-function httpGet(url)
-{
+function httpGet(url) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url, false ); // false for synchronous request
-    xmlHttp.send( null );
+    xmlHttp.open("GET", url, false);
+    xmlHttp.send(null);
     return xmlHttp.responseText;
 }
 
@@ -36,7 +35,7 @@ window.onload = function () {
 
     loading.remove();
 
-
+// ========== //
 
     let els = document.getElementsByClassName('project')
 
@@ -49,7 +48,7 @@ window.onload = function () {
 
 
         function handleMove(e) {
-
+            
             const xVal = e.layerX
             const yVal = e.layerY
 
@@ -61,6 +60,7 @@ window.onload = function () {
             el.style.transform = string
             
             setTimeout(() => {  el.style.transition = "none"; }, 150);
+            
         }
 
         el.addEventListener('mouseout', function() {
@@ -74,6 +74,7 @@ window.onload = function () {
         el.addEventListener('mouseup', function() {
             el.style.transform = 'perspective(500px) scale(1.05) rotateX(0) rotateY(0)'
         })
+        
     }
     
 }
