@@ -37,14 +37,14 @@ window.onload = function () {
 
 // ========== //
 
-    let els = document.getElementsByClassName('project')
+    let els = document.getElementsByClassName("project")
 
     for (let el of els) {
 
         const height = el.clientHeight
         const width = el.clientWidth
 
-        el.addEventListener('mousemove', handleMove)
+        el.addEventListener("mousemove", handleMove)
 
 
         function handleMove(e) {
@@ -55,7 +55,7 @@ window.onload = function () {
             const yRotation = 5 * ((xVal - width / 2) / width)
             const xRotation = -5 * ((yVal - height / 2) / height)
             
-            const string = 'perspective(500px) scale(1.05) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+            const string = "perspective(500px) scale(1.05) rotateX(" + xRotation + "deg) rotateY(" + yRotation + "deg)"
             
             el.style.transform = string
             
@@ -63,15 +63,15 @@ window.onload = function () {
             
         }
 
-        el.addEventListener('mouseout', function() {
+        el.addEventListener("mouseout", function() {
             el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
         })
 
-        el.addEventListener('mousedown', function() {
+        el.addEventListener("mousedown", function() {
             el.style.transform = 'perspective(500px) scale(0.95) rotateX(0) rotateY(0)'
         })
 
-        el.addEventListener('mouseup', function() {
+        el.addEventListener("mouseup", function() {
             el.style.transform = 'perspective(500px) scale(1.05) rotateX(0) rotateY(0)'
         })
         
