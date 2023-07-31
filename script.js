@@ -19,7 +19,7 @@ window.onload = function () {
             <a id="project1" class="projectmain" href="${element.html_url}">
                 <div class="project">
                     <h2>${element.name}</h2>
-                    <p>${ (element.description != null) ? element.description : '' }</p>
+                    <p>${ (element.description != null) ? element.description : "" }</p>
                     <div class="projectfooter">
                         <p class="projectstars"><i class="bi bi-star-fill"></i> ${element.stargazers_count}</p>
                         <p class="projectlang"><i class="bi bi-code-slash"></i> ${element.language}</p>
