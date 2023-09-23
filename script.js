@@ -52,14 +52,14 @@ window.onload = function () {
             const xVal = e.layerX
             const yVal = e.layerY
 
-            const yRotation = 5 * ((xVal - width / 2) / width)
-            const xRotation = -5 * ((yVal - height / 2) / height)
+            const yRotation = 7 * ((xVal - width / 2) / width)
+            const xRotation = -7 * ((yVal - height / 2) / height)
             
-            const string = "perspective(500px) scale(1.05) rotateX(" + xRotation + "deg) rotateY(" + yRotation + "deg)"
+            const string = "perspective(500px) rotateX(" + xRotation + "deg) scale(1.05) rotateY(" + yRotation + "deg)"
             
             el.style.transform = string
             
-            setTimeout(() => {  el.style.transition = "none"; }, 150);
+            // setTimeout(() => {  el.style.transition = "none"; }, 150);
             
         }
 

@@ -171,6 +171,8 @@ body {
     background-color: #1d1d1d;
 
     user-select: none;
+
+    transition: all 0.15s;
 }
 
 .project h2 {
